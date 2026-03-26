@@ -1,0 +1,83 @@
+:root {
+  --bg: #0d1117;
+  --fg: #c9d1d9;
+  --accent: #58a6ff;
+  --accent2: #f0883e;
+  --muted: #8b949e;
+  --border: #21262d;
+  --surface: #161b22;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+header { margin-bottom: 3rem; padding-bottom: 1rem; border-bottom: 1px solid var(--border); }
+.site-title { font-size: 1.4rem; font-weight: 700; }
+.site-desc { display: block; color: var(--muted); font-size: 0.9rem; margin-top: 0.25rem; }
+
+.post-header { margin-bottom: 2rem; }
+.post-header h1 { font-size: 1.8rem; line-height: 1.3; margin-bottom: 0.5rem; }
+.post-header time { color: var(--muted); font-size: 0.9rem; }
+.tags { margin-top: 0.5rem; }
+.tag {
+  display: inline-block;
+  background: var(--surface);
+  color: var(--accent2);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+
+.post-content { font-size: 1.05rem; }
+.post-content h2 { margin: 2rem 0 0.75rem; font-size: 1.3rem; color: var(--accent); }
+.post-content h3 { margin: 1.5rem 0 0.5rem; font-size: 1.1rem; }
+.post-content p { margin-bottom: 1rem; }
+.post-content ul, .post-content ol { margin: 0.5rem 0 1rem 1.5rem; }
+.post-content li { margin-bottom: 0.3rem; }
+.post-content code {
+  background: var(--surface);
+  padding: 0.15rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+.post-content pre {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+.post-content pre code { background: none; padding: 0; }
+.post-content blockquote {
+  border-left: 3px solid var(--accent2);
+  padding-left: 1rem;
+  color: var(--muted);
+  margin: 1rem 0;
+}
+.post-content strong { color: #e6edf3; }
+
+.post-preview { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border); }
+.post-preview h2 { font-size: 1.3rem; margin-bottom: 0.25rem; }
+.post-preview time { color: var(--muted); font-size: 0.85rem; }
+.post-preview p { color: var(--muted); margin-top: 0.5rem; }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
