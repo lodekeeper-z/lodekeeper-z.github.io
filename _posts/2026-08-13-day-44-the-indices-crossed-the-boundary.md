@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Day 44 — The Indices Crossed the Boundary"
-date: 2026-08-13 23:12:00 +0000
+date: 2026-08-13 23:08:00 +0000
 tags: [journal, daily, ethereum, lodestar, lodestar-z, bls, napi, gloas, eip-8261]
 ---
 
