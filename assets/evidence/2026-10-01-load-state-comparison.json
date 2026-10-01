@@ -1,0 +1,1202 @@
+{
+  "recorded_date": "2026-10-01",
+  "note": "Sanitized technical evidence from investigations performed earlier on this date. Journal publication rechecked the saved suite results against their CSV files, recomputed medians, verified retained binary hashes, and checked native-probe output agreement; it did not rerun the benchmarks.",
+  "source_pr": "https://github.com/ChainSafe/lodestar-z/pull/741",
+  "revisions": {
+    "before": "77ad664a86e8261caa0d48aad487208d4946f6b4",
+    "after": "ddaca79cddee60791b128a3edaa8a6667c877661"
+  },
+  "protocol": {
+    "zig": "0.16.0",
+    "optimize": "ReleaseSafe",
+    "preset": "mainnet",
+    "node": "v22.22.0",
+    "old_space_mib": 4096,
+    "memory_max_bytes": 8589934592,
+    "isolate": true,
+    "cpu": "Intel i5-1135G7",
+    "cpu_affinity_override": false,
+    "seed_era": "01628",
+    "target_era": "01629",
+    "benchmark_sha256": "dbf3f375720b79f4b44650e1521e9f27d1cf4ab79917bb7719f605715d805918",
+    "suite_statistic": "Median of four fresh-process benchmark averages per revision",
+    "native_statistic": "Separate native-only protocol: five warmups and thirty timed calls per case; median of two process medians per revision. Not pooled with suite results."
+  },
+  "binary_sha256": {
+    "before": "b12e0fe7bf7c4baf25d4ab993fd838425210ebbb49ff68e8cdc3eef491997dab",
+    "after": "12520bd871be3f118c66d4fa0110472d58015aa37c025f580e6d61a9a0ce97a3"
+  },
+  "fixture_only_replay": {
+    "implementation": "ddaca79cddee60791b128a3edaa8a6667c877661",
+    "order": [
+      "new",
+      "old",
+      "old",
+      "new"
+    ],
+    "note": "new loads next-era target; old loads seed onto itself; native binary was unchanged.",
+    "runs": [
+      {
+        "label": "1-new",
+        "rows": [
+          {
+            "id": "native (internal serialize seed)",
+            "averageNs": "230128268",
+            "runsDone": "10",
+            "totalMs": "2993",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (internal serialize seed)",
+            "averageNs": "921922284",
+            "runsDone": "10",
+            "totalMs": "10500",
+            "threshold": "3"
+          },
+          {
+            "id": "native (prebuilt seedValidatorsBytes)",
+            "averageNs": "56235840",
+            "runsDone": "11",
+            "totalMs": "1130",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (prebuilt seedValidatorsBytes)",
+            "averageNs": "404955820",
+            "runsDone": "10",
+            "totalMs": "5761",
+            "threshold": "3"
+          }
+        ]
+      },
+      {
+        "label": "2-old",
+        "rows": [
+          {
+            "id": "native (internal serialize seed)",
+            "averageNs": "221169548",
+            "runsDone": "10",
+            "totalMs": "2870",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (internal serialize seed)",
+            "averageNs": "766628116",
+            "runsDone": "10",
+            "totalMs": "8843",
+            "threshold": "3"
+          },
+          {
+            "id": "native (prebuilt seedValidatorsBytes)",
+            "averageNs": "47266183",
+            "runsDone": "10",
+            "totalMs": "1040",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (prebuilt seedValidatorsBytes)",
+            "averageNs": "302224635",
+            "runsDone": "10",
+            "totalMs": "4513",
+            "threshold": "3"
+          }
+        ]
+      },
+      {
+        "label": "3-old",
+        "rows": [
+          {
+            "id": "native (internal serialize seed)",
+            "averageNs": "173519311",
+            "runsDone": "10",
+            "totalMs": "2250",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (internal serialize seed)",
+            "averageNs": "785366359",
+            "runsDone": "10",
+            "totalMs": "9198",
+            "threshold": "3"
+          },
+          {
+            "id": "native (prebuilt seedValidatorsBytes)",
+            "averageNs": "47960093",
+            "runsDone": "10",
+            "totalMs": "1033",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (prebuilt seedValidatorsBytes)",
+            "averageNs": "307665492",
+            "runsDone": "10",
+            "totalMs": "4606",
+            "threshold": "3"
+          }
+        ]
+      },
+      {
+        "label": "4-new",
+        "rows": [
+          {
+            "id": "native (internal serialize seed)",
+            "averageNs": "228313461",
+            "runsDone": "10",
+            "totalMs": "2969",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (internal serialize seed)",
+            "averageNs": "949017113",
+            "runsDone": "10",
+            "totalMs": "10837",
+            "threshold": "3"
+          },
+          {
+            "id": "native (prebuilt seedValidatorsBytes)",
+            "averageNs": "56539702",
+            "runsDone": "11",
+            "totalMs": "1129",
+            "threshold": "3"
+          },
+          {
+            "id": "TS (prebuilt seedValidatorsBytes)",
+            "averageNs": "410832517",
+            "runsDone": "10",
+            "totalMs": "5844",
+            "threshold": "3"
+          }
+        ]
+      }
+    ]
+  },
+  "equal_work_suite_runs": [
+    {
+      "label": "pass-01-before",
+      "revision": "77ad664a86e8261caa0d48aad487208d4946f6b4",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "242957004",
+          "runsDone": "10",
+          "totalMs": "3159",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "924405871",
+          "runsDone": "10",
+          "totalMs": "10501",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "71493047",
+          "runsDone": "11",
+          "totalMs": "1359",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "494893448",
+          "runsDone": "10",
+          "totalMs": "5788",
+          "threshold": "3"
+        }
+      ]
+    },
+    {
+      "label": "pass-02-after",
+      "revision": "ddaca79cddee60791b128a3edaa8a6667c877661",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "216908189",
+          "runsDone": "10",
+          "totalMs": "2809",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "919172860",
+          "runsDone": "10",
+          "totalMs": "10577",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "55483636",
+          "runsDone": "11",
+          "totalMs": "1162",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "403311639",
+          "runsDone": "10",
+          "totalMs": "5746",
+          "threshold": "3"
+        }
+      ]
+    },
+    {
+      "label": "pass-03-after",
+      "revision": "ddaca79cddee60791b128a3edaa8a6667c877661",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "232292488",
+          "runsDone": "10",
+          "totalMs": "3010",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "942417887",
+          "runsDone": "10",
+          "totalMs": "11073",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "56045223",
+          "runsDone": "11",
+          "totalMs": "1120",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "403113649",
+          "runsDone": "10",
+          "totalMs": "5783",
+          "threshold": "3"
+        }
+      ]
+    },
+    {
+      "label": "pass-04-before",
+      "revision": "77ad664a86e8261caa0d48aad487208d4946f6b4",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "245277833",
+          "runsDone": "10",
+          "totalMs": "3186",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "1001043744",
+          "runsDone": "10",
+          "totalMs": "11160",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "70958875",
+          "runsDone": "11",
+          "totalMs": "1351",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "401815471",
+          "runsDone": "10",
+          "totalMs": "5745",
+          "threshold": "3"
+        }
+      ]
+    },
+    {
+      "label": "pass-05-before",
+      "revision": "77ad664a86e8261caa0d48aad487208d4946f6b4",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "242750923",
+          "runsDone": "10",
+          "totalMs": "3158",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "1013846596",
+          "runsDone": "10",
+          "totalMs": "11324",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "71740771",
+          "runsDone": "11",
+          "totalMs": "1293",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "403140727",
+          "runsDone": "10",
+          "totalMs": "5730",
+          "threshold": "3"
+        }
+      ]
+    },
+    {
+      "label": "pass-06-after",
+      "revision": "ddaca79cddee60791b128a3edaa8a6667c877661",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "228237051",
+          "runsDone": "10",
+          "totalMs": "2965",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "941124009",
+          "runsDone": "10",
+          "totalMs": "10678",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "55713989",
+          "runsDone": "11",
+          "totalMs": "1166",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "409616227",
+          "runsDone": "10",
+          "totalMs": "5771",
+          "threshold": "3"
+        }
+      ]
+    },
+    {
+      "label": "pass-07-after",
+      "revision": "ddaca79cddee60791b128a3edaa8a6667c877661",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "227778289",
+          "runsDone": "10",
+          "totalMs": "2908",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "949806966",
+          "runsDone": "10",
+          "totalMs": "10850",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "56263747",
+          "runsDone": "11",
+          "totalMs": "1123",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "403983051",
+          "runsDone": "10",
+          "totalMs": "5732",
+          "threshold": "3"
+        }
+      ]
+    },
+    {
+      "label": "pass-08-before",
+      "revision": "77ad664a86e8261caa0d48aad487208d4946f6b4",
+      "rows": [
+        {
+          "id": "native (internal serialize seed)",
+          "averageNs": "242865413",
+          "runsDone": "10",
+          "totalMs": "3155",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (internal serialize seed)",
+          "averageNs": "945067019",
+          "runsDone": "10",
+          "totalMs": "10571",
+          "threshold": "3"
+        },
+        {
+          "id": "native (prebuilt seedValidatorsBytes)",
+          "averageNs": "70985327",
+          "runsDone": "11",
+          "totalMs": "1347",
+          "threshold": "3"
+        },
+        {
+          "id": "TS (prebuilt seedValidatorsBytes)",
+          "averageNs": "404910497",
+          "runsDone": "10",
+          "totalMs": "5786",
+          "threshold": "3"
+        }
+      ]
+    }
+  ],
+  "equal_work_suite_summary": {
+    "native (internal serialize seed)": {
+      "before_ms": [
+        242.957004,
+        245.277833,
+        242.750923,
+        242.865413
+      ],
+      "after_ms": [
+        216.908189,
+        232.292488,
+        228.237051,
+        227.778289
+      ],
+      "before_median_ms": 242.9112085,
+      "after_median_ms": 228.00767000000002,
+      "latency_reduction_percent": 6.13538526774073
+    },
+    "TS (internal serialize seed)": {
+      "before_ms": [
+        924.405871,
+        1001.043744,
+        1013.846596,
+        945.067019
+      ],
+      "after_ms": [
+        919.17286,
+        942.417887,
+        941.124009,
+        949.806966
+      ],
+      "before_median_ms": 973.0553815,
+      "after_median_ms": 941.770948,
+      "latency_reduction_percent": 3.215072245093994
+    },
+    "native (prebuilt seedValidatorsBytes)": {
+      "before_ms": [
+        71.493047,
+        70.958875,
+        71.740771,
+        70.985327
+      ],
+      "after_ms": [
+        55.483636,
+        56.045223,
+        55.713989,
+        56.263747
+      ],
+      "before_median_ms": 71.239187,
+      "after_median_ms": 55.879605999999995,
+      "latency_reduction_percent": 21.560578730355253
+    },
+    "TS (prebuilt seedValidatorsBytes)": {
+      "before_ms": [
+        494.893448,
+        401.815471,
+        403.140727,
+        404.910497
+      ],
+      "after_ms": [
+        403.311639,
+        403.113649,
+        409.616227,
+        403.983051
+      ],
+      "before_median_ms": 404.025612,
+      "after_median_ms": 403.647345,
+      "latency_reduction_percent": 0.09362451012141546
+    }
+  },
+  "native_only_runs": [
+    {
+      "kind": "native-only-explicit-warmup",
+      "seed_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+      "next_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+      "validators_sha256": "769fb9f10f9b891122b9964dc522f6f2b99bff383b2938eb7a889478d0281258",
+      "warmups": 5,
+      "repetitions": 30,
+      "samples": {
+        "next-era:internal": [
+          250223035,
+          250438496,
+          250550951,
+          250398892,
+          251332649,
+          251731945,
+          252349381,
+          252913467,
+          252567284,
+          253638975,
+          253103254,
+          253012533,
+          253168054,
+          254352652,
+          253889619,
+          254043368,
+          256668867,
+          256350314,
+          256742292,
+          255532876,
+          259482401,
+          253718504,
+          253709029,
+          253506601,
+          253059590,
+          255627978,
+          253683803,
+          253352403,
+          254136625,
+          257720761
+        ],
+        "next-era:prebuilt": [
+          70505574,
+          70825268,
+          70795309,
+          70661921,
+          70683850,
+          71262520,
+          71612403,
+          70862605,
+          71188899,
+          70773447,
+          71072200,
+          70897209,
+          70832377,
+          70567130,
+          70792235,
+          70900574,
+          70727132,
+          70639498,
+          70913684,
+          72982344,
+          71036036,
+          71024192,
+          70696940,
+          71271168,
+          71139970,
+          71499178,
+          71100684,
+          71024548,
+          70765172,
+          70669480
+        ],
+        "same-era:internal": [
+          231916520,
+          231224520,
+          231906143,
+          231178338,
+          232104727,
+          231651764,
+          231510286,
+          231624430,
+          231902468,
+          231981425,
+          231528260,
+          231817404,
+          232038753,
+          232630068,
+          231500098,
+          233744253,
+          231890945,
+          234127401,
+          231656875,
+          231298614,
+          232132581,
+          231723189,
+          232665959,
+          231463464,
+          232082912,
+          231829292,
+          232511447,
+          231592277,
+          236115625,
+          231678473
+        ],
+        "same-era:prebuilt": [
+          49086996,
+          49002363,
+          49046635,
+          49007001,
+          49000412,
+          49088410,
+          48867917,
+          49044633,
+          49065074,
+          48936013,
+          49077616,
+          49330743,
+          49404643,
+          49123622,
+          48942219,
+          49318054,
+          49277559,
+          49419490,
+          49944598,
+          49046605,
+          49785985,
+          49247042,
+          49558079,
+          49482796,
+          49237254,
+          49383061,
+          49363678,
+          49410247,
+          49805258,
+          49700783
+        ]
+      },
+      "correctness": [
+        {
+          "workload": "next-era",
+          "mode": "internal",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "next-era",
+          "mode": "prebuilt",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "internal",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "prebuilt",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        }
+      ],
+      "label": "before"
+    },
+    {
+      "kind": "native-only-explicit-warmup",
+      "seed_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+      "next_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+      "validators_sha256": "769fb9f10f9b891122b9964dc522f6f2b99bff383b2938eb7a889478d0281258",
+      "warmups": 5,
+      "repetitions": 30,
+      "samples": {
+        "next-era:internal": [
+          240983170,
+          243865683,
+          242335856,
+          242344836,
+          238817596,
+          239004550,
+          239853551,
+          240773002,
+          240622535,
+          240951784,
+          241002405,
+          241417158,
+          241636963,
+          241603612,
+          241463639,
+          242257296,
+          241715984,
+          242264947,
+          242460245,
+          242801927,
+          247694320,
+          242671101,
+          242627687,
+          242724443,
+          242722158,
+          242572162,
+          241918523,
+          242678580,
+          244895045,
+          242384739
+        ],
+        "next-era:prebuilt": [
+          57043019,
+          57853269,
+          57493528,
+          57667945,
+          56932338,
+          58093181,
+          56926996,
+          56791007,
+          57091444,
+          57046010,
+          57551932,
+          57065073,
+          57499334,
+          57506952,
+          57911509,
+          57178275,
+          57065354,
+          57108667,
+          57426347,
+          57095170,
+          57483568,
+          57460596,
+          62754313,
+          65519617,
+          62444919,
+          59883770,
+          57281698,
+          57081941,
+          57409771,
+          57584645
+        ],
+        "same-era:internal": [
+          235629039,
+          235656084,
+          236162784,
+          235738357,
+          235930848,
+          235720497,
+          237680597,
+          235723541,
+          235803335,
+          235572586,
+          236599398,
+          235768146,
+          236102338,
+          235772858,
+          235754703,
+          235954520,
+          236194260,
+          236406385,
+          236716251,
+          237020179,
+          235708840,
+          235791148,
+          235989118,
+          235898567,
+          236036690,
+          235598974,
+          240490801,
+          236544621,
+          235758070,
+          235567782
+        ],
+        "same-era:prebuilt": [
+          49248339,
+          49105282,
+          49190869,
+          48893593,
+          49306956,
+          48938126,
+          49294194,
+          48967684,
+          48865763,
+          49019826,
+          48844595,
+          49276277,
+          49010499,
+          48845985,
+          48942973,
+          49014515,
+          48915831,
+          49017539,
+          48970514,
+          49074978,
+          49394275,
+          49336014,
+          49154432,
+          49048124,
+          49191623,
+          50031961,
+          48912493,
+          49023909,
+          48993443,
+          49071745
+        ]
+      },
+      "correctness": [
+        {
+          "workload": "next-era",
+          "mode": "internal",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "next-era",
+          "mode": "prebuilt",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "internal",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "prebuilt",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        }
+      ],
+      "label": "after"
+    },
+    {
+      "kind": "native-only-explicit-warmup",
+      "seed_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+      "next_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+      "validators_sha256": "769fb9f10f9b891122b9964dc522f6f2b99bff383b2938eb7a889478d0281258",
+      "warmups": 5,
+      "repetitions": 30,
+      "samples": {
+        "next-era:internal": [
+          229554521,
+          229740173,
+          230713449,
+          232054055,
+          235165426,
+          231489371,
+          231726632,
+          231853593,
+          232494669,
+          232877219,
+          234068087,
+          233346859,
+          232880259,
+          233700594,
+          238035271,
+          234867612,
+          234084330,
+          234171616,
+          234484708,
+          236410534,
+          234048028,
+          234986045,
+          235336596,
+          234654424,
+          234300425,
+          235081997,
+          234684157,
+          235572164,
+          235048863,
+          234400717
+        ],
+        "next-era:prebuilt": [
+          57115237,
+          56986215,
+          56891947,
+          57054089,
+          57072122,
+          56805714,
+          57159670,
+          56984601,
+          57030179,
+          56912037,
+          57025041,
+          57060555,
+          57058309,
+          57038916,
+          56818748,
+          57155369,
+          57124864,
+          57500943,
+          57931255,
+          57256045,
+          57143720,
+          57102355,
+          57144646,
+          57599903,
+          57142970,
+          57285839,
+          57161962,
+          57015885,
+          57427917,
+          57229679
+        ],
+        "same-era:internal": [
+          228642598,
+          227823385,
+          227772974,
+          227795546,
+          227802995,
+          228297910,
+          230459336,
+          236480201,
+          231162574,
+          236640000,
+          231242213,
+          230325068,
+          230494019,
+          231602754,
+          239472469,
+          232236981,
+          230951566,
+          230084953,
+          232901858,
+          230741049,
+          233036056,
+          233309907,
+          235284326,
+          234098615,
+          230615984,
+          231032345,
+          229827899,
+          227215755,
+          226961898,
+          226639311
+        ],
+        "same-era:prebuilt": [
+          48737960,
+          49028727,
+          48894239,
+          49243670,
+          49304891,
+          50078997,
+          49239276,
+          49234881,
+          48773427,
+          49131822,
+          49563389,
+          50132397,
+          49829752,
+          49114650,
+          49269029,
+          49191254,
+          48977136,
+          49161979,
+          48855098,
+          49521785,
+          49844158,
+          53652421,
+          49509908,
+          49532907,
+          49025075,
+          49414544,
+          49303050,
+          49343568,
+          48930920,
+          49098740
+        ]
+      },
+      "correctness": [
+        {
+          "workload": "next-era",
+          "mode": "internal",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "next-era",
+          "mode": "prebuilt",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "internal",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "prebuilt",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        }
+      ],
+      "label": "after"
+    },
+    {
+      "kind": "native-only-explicit-warmup",
+      "seed_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+      "next_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+      "validators_sha256": "769fb9f10f9b891122b9964dc522f6f2b99bff383b2938eb7a889478d0281258",
+      "warmups": 5,
+      "repetitions": 30,
+      "samples": {
+        "next-era:internal": [
+          245741405,
+          244980359,
+          247283358,
+          247153715,
+          247004104,
+          247317828,
+          248719451,
+          252951103,
+          249490740,
+          250053151,
+          250441890,
+          250421905,
+          250130710,
+          251077854,
+          250278786,
+          251564972,
+          250214411,
+          252010274,
+          251187088,
+          251307874,
+          250590347,
+          250680359,
+          251578039,
+          253748322,
+          251527450,
+          250780580,
+          251014162,
+          251803519,
+          251765526,
+          250800512
+        ],
+        "next-era:prebuilt": [
+          74293849,
+          73402509,
+          73068039,
+          73073929,
+          72975421,
+          72992874,
+          72727905,
+          73613515,
+          72807571,
+          72811730,
+          73032560,
+          73011498,
+          72958248,
+          73298317,
+          74197077,
+          73642702,
+          73348766,
+          73471656,
+          73429436,
+          73342292,
+          72949247,
+          73308010,
+          73178589,
+          73433725,
+          73076775,
+          73013740,
+          73985836,
+          74201289,
+          73636317,
+          73575583
+        ],
+        "same-era:internal": [
+          229030355,
+          228912115,
+          228875958,
+          229749496,
+          228794118,
+          229183497,
+          228699021,
+          229130397,
+          228811315,
+          233101841,
+          230637444,
+          229993283,
+          236857971,
+          236569672,
+          229457345,
+          229170905,
+          229707225,
+          229066567,
+          229128726,
+          228694852,
+          230349080,
+          229780735,
+          229118636,
+          228848738,
+          233634061,
+          229145741,
+          229416901,
+          229107110,
+          229121402,
+          229897906
+        ],
+        "same-era:prebuilt": [
+          50143342,
+          50128780,
+          49431545,
+          49742880,
+          50365168,
+          49985161,
+          49630348,
+          49730249,
+          49885243,
+          49929011,
+          50021930,
+          49927612,
+          49602554,
+          49748622,
+          49327937,
+          49625345,
+          49772695,
+          50459806,
+          49945991,
+          49828411,
+          49443943,
+          50020069,
+          49536817,
+          49686756,
+          49703600,
+          50079592,
+          49817551,
+          49870452,
+          49857607,
+          49758460
+        ]
+      },
+      "correctness": [
+        {
+          "workload": "next-era",
+          "mode": "internal",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "next-era",
+          "mode": "prebuilt",
+          "state_root": "68ac61337ec1f3ef2a3f311aba9a83fef2e46dafe885e9d5c1d64931f2444bd3",
+          "serialized_sha256": "86c3d3622bb1d3c8678da9c69a56d0646b9b0b31bbe956f5944be204a4fb7752",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "internal",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        },
+        {
+          "workload": "same-era",
+          "mode": "prebuilt",
+          "state_root": "7b1f292ff120657f25f51f1bf25b9e24befdb5f020e0d746a462c06f46975dd9",
+          "serialized_sha256": "cd12f798c5ea6f5e4c557d8cf6edef8d59b033636225c8dfe5c0d431398945df",
+          "seed_unchanged": true
+        }
+      ],
+      "label": "before"
+    }
+  ],
+  "limitations": [
+    "One host and one next-era fixture; not proof across all validator-change patterns.",
+    "No CPU pinning; raw process variation retained.",
+    "The first detached-HEAD attempt failed benchmark persistence and is excluded from the eight successful suite runs.",
+    "Output correctness was checked outside timing via loadOtherState; the void loadOtherStateBench API does not expose each timed result.",
+    "Production monitor configuration and history were not changed by these investigations."
+  ]
+}
