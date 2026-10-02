@@ -1,0 +1,170 @@
+{
+  "schema": 1,
+  "date": "2026-10-02",
+  "note": "Sanitized technical evidence from the October 2 workload-baseline correction. Publication rechecked the installed source hashes, saved production CSV, runtime records, immutable history and mutation logs, replayed the saved production result, and reran the installed monitor test suite. It did not rerun the full production benchmark or modify its schedule. No conversation content, local paths, hostnames or delivery identifiers are included.",
+  "upstream_fixture_change": "https://github.com/ChainSafe/lodestar-z/pull/741",
+  "installed_sha256": {
+    "lodestar_z_daily_benchmark.py": "df38812adadd56c2f9b1c171e0035b7c26d97bd2682ad5789390c6f8bbab6485",
+    "test_lodestar_z_daily_benchmark.py": "e4d28c7cc19024925dad12ba75692d1702402e48807c782ec1d69411d6c9574f"
+  },
+  "production_validation": {
+    "benchmark_commit": "b70e8f5662a08a0d177b2f7c96e2c16e5b1b6cce",
+    "started": "2026-10-02T14:02:27.135880+00:00",
+    "finished": "2026-10-02T14:07:15.337252+00:00",
+    "exit_code": 0,
+    "stdout_empty": true,
+    "unique_cases": 49,
+    "runtime_guard_records": 4,
+    "snapshot_sha256": "33a28355c032a5cb81c062b909e89b7003f816b07c2c51eba0252b236ff74f92",
+    "compatible_prior_samples": {
+      "aggregatePublicKeys 1 keys": 9,
+      "aggregatePublicKeys 8 keys": 9,
+      "aggregatePublicKeys 32 keys": 9,
+      "aggregatePublicKeys 128 keys": 9,
+      "aggregatePublicKeys 256 keys": 9,
+      "aggregateSignatures 1 sigs": 9,
+      "aggregateSignatures 8 sigs": 9,
+      "aggregateSignatures 32 sigs": 9,
+      "aggregateSignatures 128 sigs": 9,
+      "aggregateSignatures 256 sigs": 9,
+      "aggregateVerify 3 sets": 9,
+      "aggregateVerify 8 sets": 9,
+      "aggregateVerify 32 sets": 9,
+      "aggregateVerify 64 sets": 9,
+      "aggregateVerify 128 sets": 9,
+      "verifyMultipleAggregateSignatures 3 sets": 9,
+      "verifyMultipleAggregateSignatures 8 sets": 9,
+      "verifyMultipleAggregateSignatures 32 sets": 9,
+      "verifyMultipleAggregateSignatures 64 sets": 9,
+      "verifyMultipleAggregateSignatures 128 sets": 9,
+      "native (internal serialize seed)": 2,
+      "TS (internal serialize seed)": 2,
+      "native (prebuilt seedValidatorsBytes)": 2,
+      "TS (prebuilt seedValidatorsBytes)": 2,
+      "JS  - unshuffleList - 16384 indices": 9,
+      "zig - unshuffleList - 16384 indices": 9,
+      "JS  - unshuffleList - 250000 indices": 9,
+      "zig - unshuffleList - 250000 indices": 9,
+      "JS  - unshuffleList - 1000000 indices": 9,
+      "zig - unshuffleList - 1000000 indices": 9,
+      "JS  - computeSyncCommitteeIndicesElectra - 16384 indices": 9,
+      "zig - computeSyncCommitteeIndices - 16384 indices": 9,
+      "zig - computeProposerIndex - 16384 indices": 9,
+      "JS  - computeSyncCommitteeIndicesElectra - 250000 indices": 9,
+      "zig - computeSyncCommitteeIndices - 250000 indices": 9,
+      "zig - computeProposerIndex - 250000 indices": 9,
+      "JS  - computeSyncCommitteeIndicesElectra - 1000000 indices": 9,
+      "zig - computeSyncCommitteeIndices - 1000000 indices": 9,
+      "zig - computeProposerIndex - 1000000 indices": 9,
+      "JS  - computePtcIndices - 16384 indices": 9,
+      "zig - computePtcIndices - 16384 indices": 9,
+      "JS  - computePtcIndices - 250000 indices": 9,
+      "zig - computePtcIndices - 250000 indices": 9,
+      "JS  - computePtcIndices - 1000000 indices": 9,
+      "zig - computePtcIndices - 1000000 indices": 9,
+      "JS  - computePtcIndicesForEpoch - 250000 validators": 9,
+      "zig - computePtcIndicesForEpoch - 250000 validators": 9,
+      "JS  - computePtcIndicesForEpoch - 1000000 validators": 9,
+      "zig - computePtcIndicesForEpoch - 1000000 validators": 9
+    },
+    "compatible_prior_count_distribution": {
+      "9": 45,
+      "2": 4
+    },
+    "load_state_samples_after_this_validation": 3,
+    "rolling_minimum_prior_samples": 3,
+    "rolling_alerts_on_publication_replay": [],
+    "load_state_was_warming_up_during_validation": true,
+    "load_state_average_ms": {
+      "native (internal serialize seed)": 227.971949,
+      "TS (internal serialize seed)": 914.126177,
+      "native (prebuilt seedValidatorsBytes)": 56.328307,
+      "TS (prebuilt seedValidatorsBytes)": 405.269049
+    }
+  },
+  "history": {
+    "preexisting_daily_and_confirmation_snapshots_rehashed": 33,
+    "all_preserved": true,
+    "native_latest_and_same_commit_history_were_refreshed_by_validation": true
+  },
+  "recorded_mutations": [
+    {
+      "mutation": "workload-match",
+      "test": "test_changed_workload_is_excluded_without_resetting_unrelated_cases",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "suite-fingerprint",
+      "test": "test_changed_workload_is_excluded_without_resetting_unrelated_cases",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "helper-fingerprint",
+      "test": "test_fixture_helper_changes_start_a_new_workload",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "era-fingerprint",
+      "test": "test_era_selection_changes_workload_but_implementation_revision_does_not",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "framework-filter",
+      "test": "test_framework_baseline_excludes_changed_workload_without_editing_history",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "implementation-exclusion",
+      "test": "test_reference_implementation_changes_do_not_reset_the_baseline",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "shuffle-constants",
+      "test": "test_reference_workload_constants_change_the_shuffle_key",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "unsupported-constants",
+      "test": "test_unsupported_reference_constant_declarations_fail_closed",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "main-routing",
+      "test": "test_main_uses_filtered_framework_history_and_preserves_daily_snapshots",
+      "exit": 1,
+      "killed": true
+    },
+    {
+      "mutation": "real-regression",
+      "test": "test_matching_next_era_samples_still_detect_real_slowdowns",
+      "exit": 1,
+      "killed": true
+    }
+  ],
+  "recorded_independent_review": {
+    "spec_pass": true,
+    "quality_approval": true,
+    "security_approval": true,
+    "findings": []
+  },
+  "publication_test_rerun": {
+    "started": "2026-10-02T23:12:52.944869+00:00",
+    "finished": "2026-10-02T23:12:59.323125+00:00",
+    "tests": 31,
+    "exit_code": 0,
+    "result": "OK"
+  },
+  "scope_limits": [
+    "Fingerprints cover registered benchmark families and recognized source/setup inputs, not arbitrary future workloads.",
+    "Timed implementation bodies are excluded; supported exported numeric workload constants in the mixed-purpose shuffle reference module are included.",
+    "No assertion of a new native speedup or of the next scheduled production execution is made."
+  ]
+}
