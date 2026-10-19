@@ -1,0 +1,64 @@
+{
+  "at": "2026-10-19T23:06:38.009411+00:00",
+  "kind": "source-literal comparison, not runtime test",
+  "method": "Extract HEZE_FORK_VERSION literals from the pinned native network files and TypeScript configuration objects; follow explicit mainnet and gnosis object spreads when the TypeScript object has no override.",
+  "limitations": "This compares source defaults, not running nodes or binding outputs. An explicitly supplied JavaScript configuration property overrides the binding's native default. The comparison does not establish final network parameters or a live consensus fault.",
+  "native_sha": "906ea627245c28d4e7e1bbf941a4436945462fd1",
+  "typescript_sha": "708700cdf63c49b5673b9c2380d6c2097b6a666f",
+  "results": [
+    {
+      "network": "mainnet",
+      "native": "0x08000000",
+      "typescript": "0x08000000",
+      "typescript_inheritance": ["mainnet"],
+      "match": true,
+      "native_source": "https://github.com/ChainSafe/lodestar-z/blob/906ea627245c28d4e7e1bbf941a4436945462fd1/src/config/networks/mainnet.zig",
+      "typescript_source": "https://github.com/ChainSafe/lodestar/blob/708700cdf63c49b5673b9c2380d6c2097b6a666f/packages/config/src/chainConfig/configs/mainnet.ts"
+    },
+    {
+      "network": "minimal",
+      "native": "0x08000001",
+      "typescript": "0x08000001",
+      "typescript_inheritance": ["minimal"],
+      "match": true,
+      "native_source": "https://github.com/ChainSafe/lodestar-z/blob/906ea627245c28d4e7e1bbf941a4436945462fd1/src/config/networks/minimal.zig",
+      "typescript_source": "https://github.com/ChainSafe/lodestar/blob/708700cdf63c49b5673b9c2380d6c2097b6a666f/packages/config/src/chainConfig/configs/minimal.ts"
+    },
+    {
+      "network": "gnosis",
+      "native": "0x08000064",
+      "typescript": "0x08000000",
+      "typescript_inheritance": ["gnosis", "mainnet"],
+      "match": false,
+      "native_source": "https://github.com/ChainSafe/lodestar-z/blob/906ea627245c28d4e7e1bbf941a4436945462fd1/src/config/networks/gnosis.zig",
+      "typescript_source": "https://github.com/ChainSafe/lodestar/blob/708700cdf63c49b5673b9c2380d6c2097b6a666f/packages/config/src/chainConfig/networks/gnosis.ts"
+    },
+    {
+      "network": "hoodi",
+      "native": "0x90000910",
+      "typescript": "0x08000000",
+      "typescript_inheritance": ["hoodi", "mainnet"],
+      "match": false,
+      "native_source": "https://github.com/ChainSafe/lodestar-z/blob/906ea627245c28d4e7e1bbf941a4436945462fd1/src/config/networks/hoodi.zig",
+      "typescript_source": "https://github.com/ChainSafe/lodestar/blob/708700cdf63c49b5673b9c2380d6c2097b6a666f/packages/config/src/chainConfig/networks/hoodi.ts"
+    },
+    {
+      "network": "sepolia",
+      "native": "0x90000077",
+      "typescript": "0x08000000",
+      "typescript_inheritance": ["sepolia", "mainnet"],
+      "match": false,
+      "native_source": "https://github.com/ChainSafe/lodestar-z/blob/906ea627245c28d4e7e1bbf941a4436945462fd1/src/config/networks/sepolia.zig",
+      "typescript_source": "https://github.com/ChainSafe/lodestar/blob/708700cdf63c49b5673b9c2380d6c2097b6a666f/packages/config/src/chainConfig/networks/sepolia.ts"
+    },
+    {
+      "network": "chiado",
+      "native": "0x0800006f",
+      "typescript": "0x08000000",
+      "typescript_inheritance": ["chiado", "gnosis", "mainnet"],
+      "match": false,
+      "native_source": "https://github.com/ChainSafe/lodestar-z/blob/906ea627245c28d4e7e1bbf941a4436945462fd1/src/config/networks/chiado.zig",
+      "typescript_source": "https://github.com/ChainSafe/lodestar/blob/708700cdf63c49b5673b9c2380d6c2097b6a666f/packages/config/src/chainConfig/networks/chiado.ts"
+    }
+  ]
+}
