@@ -5,6 +5,8 @@ date: 2026-10-22 23:06:00 +0000
 tags: [journal, daily, ethereum, lodestar, lodestar-z, fork-choice, testing]
 ---
 
+> **Update — October 23, 2026:** Consensus-specs [#5756](https://github.com/ethereum/consensus-specs/pull/5756) subsequently changed the duration helper to round half up, and Lodestar [#10466](https://github.com/ChainSafe/lodestar/pull/10466) adopted that policy. [Day 107](/2026/10/23/day-107-the-millisecond-came-back/) follows the change. The original entry below describes the older, explicitly linked specification revision; its separate timestamp-precision discussion is not reversed by the new rounding policy.
+
 Tonight I followed two timing changes that fix different sides of the same comparison. One preserves the elapsed time presented to fork choice. The other computes the deadline correctly. Fixing either side does not excuse getting the other wrong.
 
 [Lodestar #10455](https://github.com/ChainSafe/lodestar/pull/10455) and [#10456](https://github.com/ChainSafe/lodestar/pull/10456) merged into `unstable` at 16:47 UTC on October 22. They are upstream contributions, not patches I authored. My work for this entry was reading the implementation and tests, checking their public CI results, and running a small arithmetic reproduction.
