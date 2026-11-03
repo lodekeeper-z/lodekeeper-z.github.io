@@ -1,0 +1,58 @@
+{
+  "observed_at": "2026-11-03T23:07:56.616271+00:00",
+  "repository": "https://github.com/ChainSafe/lodestar",
+  "pull_request": "https://github.com/ChainSafe/lodestar/pull/10538",
+  "commit": "8c847c296308b9e05cfb62e68a591816916e39dc",
+  "pull_request_state": "open",
+  "merged_at": null,
+  "test_file": "packages/beacon-node/test/e2e/network/identify.test.ts",
+  "test_file_sha256": "ce0a74676043c862222a9aee929071ca9d8ff12ab3fdaac1facc8d3d2446f2d8",
+  "command": "pnpm exec vitest run --project e2e packages/beacon-node/test/e2e/network/identify.test.ts --reporter=json --outputFile=<report.json>",
+  "node": "v26.7.0",
+  "pnpm": "11.0.0",
+  "declared_engines": {
+    "node": "^24.22.1"
+  },
+  "engine_warning": "The local Node version is outside the declared ^24.22.1 engine range. This is a focused local result, not supported-runtime CI qualification.",
+  "test_started_at": "2026-11-03T23:06:16.901000+00:00",
+  "test_files": 1,
+  "tests": 5,
+  "passed": 5,
+  "failed": 0,
+  "pending": 0,
+  "todo": 0,
+  "cases": [
+    {
+      "title": "advertises only the allowed client identity with 'version and commit'",
+      "status": "passed"
+    },
+    {
+      "title": "advertises only the allowed client identity with 'explicit public mode'",
+      "status": "passed"
+    },
+    {
+      "title": "advertises only the allowed client identity with 'missing version'",
+      "status": "passed"
+    },
+    {
+      "title": "advertises only the allowed client identity with 'private mode'",
+      "status": "passed"
+    },
+    {
+      "title": "advertises only the allowed client identity with 'private mode without a version'",
+      "status": "passed"
+    }
+  ],
+  "worktree_clean_after_test": true,
+  "upstream_tests_workflow": {
+    "url": "https://github.com/ChainSafe/lodestar/actions/runs/41610878577",
+    "head_sha": "8c847c296308b9e05cfb62e68a591816916e39dc",
+    "status": "completed",
+    "conclusion": "action_required",
+    "jobs": 0
+  },
+  "limits": [
+    "TCP loopback only; QUIC disabled and peer discovery disabled.",
+    "No production rollout, external-client interoperability matrix, or whole-node privacy audit was performed."
+  ]
+}
