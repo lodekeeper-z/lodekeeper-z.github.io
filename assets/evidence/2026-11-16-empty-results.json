@@ -1,0 +1,149 @@
+{
+  "node": "v22.22.0",
+  "sources": [
+    {
+      "revision": "6c6b758cc78397ddfcc9a070e7e084e06462c88a",
+      "path": "packages/beacon-node/src/util/bitArray.ts",
+      "sha256": "8371bd138903484ba0ecba032430b83366180e4802ed9eca0417480e82f30722"
+    },
+    {
+      "revision": "8a64241e1ba670a1abb0fad922ac071a9afbc529",
+      "path": "packages/beacon-node/src/util/bitArray.ts",
+      "sha256": "0dfe591c66695c01b129c765464c1a7198ba36a7e90a9cba0ed60008ab5467c5"
+    },
+    {
+      "revision": "42cba9af41f7fab39f62ff8bd6d0ae80315e55c9",
+      "path": "packages/validator/src/services/doppelgangerService.ts",
+      "sha256": "c65763905bdb9fee80fec8c44a7b5bcd43aa69ed5a7bbba0a364358a2d2a32ec"
+    },
+    {
+      "revision": "5c2cf84ec1669c5a6822d5501443a5ba396c0c70",
+      "path": "packages/validator/src/services/doppelgangerService.ts",
+      "sha256": "d427142cc93deea91af30931fc4eb8a1062ab8402d4e6a9b8b8f6bfb10521951"
+    }
+  ],
+  "exhaustive": {
+    "cases": 65536,
+    "beforeMismatches": 510,
+    "afterMismatches": 0
+  },
+  "crossByte": [
+    {
+      "a": [
+        255,
+        15
+      ],
+      "b": [
+        15,
+        0
+      ],
+      "expected": "Superset",
+      "before": "Intersect",
+      "after": "Superset"
+    },
+    {
+      "a": [
+        15,
+        0
+      ],
+      "b": [
+        255,
+        15
+      ],
+      "expected": "Subset",
+      "before": "Intersect",
+      "after": "Subset"
+    },
+    {
+      "a": [
+        15,
+        0
+      ],
+      "b": [
+        0,
+        240
+      ],
+      "expected": "Exclusive",
+      "before": "Exclusive",
+      "after": "Exclusive"
+    },
+    {
+      "a": [
+        255,
+        15,
+        0
+      ],
+      "b": [
+        15,
+        0,
+        240
+      ],
+      "expected": "Intersect",
+      "before": "Intersect",
+      "after": "Intersect"
+    },
+    {
+      "a": [
+        15,
+        1
+      ],
+      "b": [
+        15
+      ],
+      "expected": "Superset",
+      "before": "Intersect",
+      "after": "Superset"
+    }
+  ],
+  "unequalBitLengths": {
+    "before": true,
+    "after": false
+  },
+  "doppelganger": [
+    {
+      "kind": "failed-current-request",
+      "before": {
+        "status": "VerifiedSafe",
+        "shutdowns": 0
+      },
+      "after": {
+        "status": "Unverified",
+        "shutdowns": 0
+      }
+    },
+    {
+      "kind": "missing-index-in-partial-response",
+      "before": {
+        "status": "VerifiedSafe",
+        "shutdowns": 0
+      },
+      "after": {
+        "status": "Unverified",
+        "shutdowns": 0
+      }
+    },
+    {
+      "kind": "explicit-not-live-response",
+      "before": {
+        "status": "VerifiedSafe",
+        "shutdowns": 0
+      },
+      "after": {
+        "status": "VerifiedSafe",
+        "shutdowns": 0
+      }
+    },
+    {
+      "kind": "live-current-response",
+      "before": {
+        "status": "DoppelgangerDetected",
+        "shutdowns": 1
+      },
+      "after": {
+        "status": "DoppelgangerDetected",
+        "shutdowns": 1
+      }
+    }
+  ],
+  "assertions": "passed"
+}
