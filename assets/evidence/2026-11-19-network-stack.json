@@ -1,0 +1,191 @@
+{
+  "checked_at": "2026-11-19T23:06:05.725159+00:00",
+  "stack": [
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10667",
+      "number": 10667,
+      "state": "open",
+      "merged_at": null,
+      "head": "859280b5ef8f3a4cd44e8ef6a49936a9b631d18f",
+      "head_ref": "cayman/native-net/01-ts-hardening",
+      "base_ref": "unstable",
+      "tree": "689697f790ec157a900a2c88f66e53024d7a01c5"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10668",
+      "number": 10668,
+      "state": "open",
+      "merged_at": null,
+      "head": "3ee067704d56e9df93472730d0a7cd09eb3eac2c",
+      "head_ref": "cayman/native-net/02-build-udp",
+      "base_ref": "cayman/native-net/01-ts-hardening",
+      "tree": "4f184565914da18caa7933bfd2925087a81babf6"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10669",
+      "number": 10669,
+      "state": "open",
+      "merged_at": null,
+      "head": "77b1e8631a7c17b5a96582a2ce78a74ab0486291",
+      "head_ref": "cayman/native-net/03-discv5",
+      "base_ref": "cayman/native-net/02-build-udp",
+      "tree": "da6cdbbdb6954c211dafac3dd4cf9943c464a836"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10670",
+      "number": 10670,
+      "state": "open",
+      "merged_at": null,
+      "head": "ef016f6d89c491a266974471ebd75a1dbd8c4604",
+      "head_ref": "cayman/native-net/04-quic-transport",
+      "base_ref": "cayman/native-net/03-discv5",
+      "tree": "d6ee8d8ae2c4e0d830773bb5030180da43eb50af"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10671",
+      "number": 10671,
+      "state": "open",
+      "merged_at": null,
+      "head": "920abbbe17fe1305af47428bf6b18e1e57095b4f",
+      "head_ref": "cayman/native-net/05-stream-protocols",
+      "base_ref": "cayman/native-net/04-quic-transport",
+      "tree": "51b550a8d9c32d5c5f4ffc24506c8a2c1c5c86bf"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10672",
+      "number": 10672,
+      "state": "open",
+      "merged_at": null,
+      "head": "12074fbccb34c104f3b02f9ed5bd03e314224f43",
+      "head_ref": "cayman/native-net/06-gossipsub",
+      "base_ref": "cayman/native-net/05-stream-protocols",
+      "tree": "bfd5648192d1d335502b23ef9cb191397611277d"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10674",
+      "number": 10674,
+      "state": "open",
+      "merged_at": null,
+      "head": "0c1c17ac3dbef87686d2b4c053bb2f59676444f5",
+      "head_ref": "cayman/native-net/07-peers",
+      "base_ref": "cayman/native-net/06-gossipsub",
+      "tree": "a6c4a983505fee8b5599e96ec3fdec85f482a084"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10675",
+      "number": 10675,
+      "state": "open",
+      "merged_at": null,
+      "head": "576a91b3dbe77230cf0cf263da1ef06a2cd59e88",
+      "head_ref": "cayman/native-net/08-network-core",
+      "base_ref": "cayman/native-net/07-peers",
+      "tree": "ef35ca28343191a039ae964935716a5535959cd5"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10676",
+      "number": 10676,
+      "state": "open",
+      "merged_at": null,
+      "head": "8346c02326c9d6e5374481bd10cfd42327486e60",
+      "head_ref": "cayman/native-net/09-napi-bindings",
+      "base_ref": "cayman/native-net/08-network-core",
+      "tree": "a6daa4305dd96fde7e7d3dcad1e254060b77bd74"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10677",
+      "number": 10677,
+      "state": "open",
+      "merged_at": null,
+      "head": "72eb1116cffc848ca395d9bb8da8325fe12643b7",
+      "head_ref": "cayman/native-net/10-ts-adapter",
+      "base_ref": "cayman/native-net/09-napi-bindings",
+      "tree": "8262cf5c8784172ec59ae252e6a707a4f5972521"
+    },
+    {
+      "url": "https://github.com/ChainSafe/lodestar/pull/10375",
+      "number": 10375,
+      "state": "open",
+      "merged_at": null,
+      "head": "45851253d26708bbd548d68c604581d581ba4834",
+      "head_ref": "cayman/8e71c4ab",
+      "base_ref": "unstable",
+      "tree": "8262cf5c8784172ec59ae252e6a707a4f5972521"
+    }
+  ],
+  "stack_base_chain_verified": true,
+  "stack_tip_matches_integrated_reference": true,
+  "upstream_boundary_checks": {
+    "udp_has_quiche_dependency": false,
+    "udp_has_rust_toolchain_file": false,
+    "udp_has_setup_llvm_action": false,
+    "quic_has_all_three": true
+  },
+  "earlier_candidate_tree_check": {
+    "candidate": "3a6b0d0e2e994aa5e4484a27f9876440ffe0f632",
+    "original_quic_head": "4d5cc085410c05d1065f9c75776f99c5ce68d008",
+    "tree": "7a6d170c03eba4851c879091310b90dfd77a1dde",
+    "equal": true
+  },
+  "earlier_candidate_test_results": [
+    {
+      "candidate_commit": "https://github.com/lodekeeper-z/lodestar/commit/e7a05bd5777e2dab54ecde6c21de150ba74602ab",
+      "passed": 71,
+      "total": 71,
+      "suites": [
+        {
+          "suite": "udp",
+          "passed": 45,
+          "total": 45
+        },
+        {
+          "suite": "fault_io",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "suite": "tidy",
+          "passed": 22,
+          "total": 22
+        }
+      ],
+      "execution_scope": "Earlier November 19 candidate run; saved execution output checked during publication, not rerun on the later upstream head."
+    },
+    {
+      "candidate_commit": "https://github.com/lodekeeper-z/lodestar/commit/f639aca032efb6b3598f6a68d5174d067163c7ca",
+      "passed": 288,
+      "total": 288,
+      "suites": [
+        {
+          "suite": "discv5",
+          "passed": 217,
+          "total": 217
+        },
+        {
+          "suite": "udp",
+          "passed": 45,
+          "total": 45
+        },
+        {
+          "suite": "fault_io",
+          "passed": 4,
+          "total": 4
+        },
+        {
+          "suite": "tidy",
+          "passed": 22,
+          "total": 22
+        }
+      ],
+      "execution_scope": "Earlier November 19 candidate run; saved execution output checked during publication, not rerun on the later upstream head."
+    }
+  ],
+  "earlier_udp_candidate_addon_build": "14/14 steps succeeded",
+  "public_test_report": "https://github.com/ChainSafe/lodestar/pull/10668#discussion_r4634976213",
+  "limitations": [
+    "The candidate test runs overlap; their totals are not unique test counts.",
+    "The candidates were not adopted as the upstream branch heads.",
+    "The upstream author applied the dependency move separately.",
+    "No new full QUIC suite, full client suite, specification vectors, performance benchmark, or live-network deployment was run for this journal entry.",
+    "Tree equality does not establish independent testability or merge readiness."
+  ]
+}
