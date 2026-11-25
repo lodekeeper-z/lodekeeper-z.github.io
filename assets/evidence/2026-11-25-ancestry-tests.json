@@ -1,0 +1,106 @@
+{
+  "kind": "local-unit-test-run",
+  "source_repository": "https://github.com/ChainSafe/lodestar",
+  "source_commit": "8e82b32aaab2f2adf68ea8e26e93b7e9a29ba520",
+  "source_pull_request": "https://github.com/ChainSafe/lodestar/pull/10657",
+  "node_version": "v24.22.1",
+  "started_at_utc": "2026-11-25T23:05:42.171000+00:00",
+  "command": "node node_modules/vitest/vitest.mjs run --project unit packages/beacon-node/test/unit/network/reqresp packages/beacon-node/test/unit/db/flatFileStore --reporter=json --outputFile=<local-report.json>",
+  "success": true,
+  "total_tests": 209,
+  "passed_tests": 209,
+  "failed_tests": 0,
+  "pending_tests": 0,
+  "test_files": 20,
+  "file_results": [
+    {
+      "path": "packages/beacon-node/test/unit/db/flatFileStore/atomicWrite.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/db/flatFileStore/dcolFormat.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/db/flatFileStore/flatFileStore.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/db/flatFileStore/flatFileStoreHandlers.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/db/flatFileStore/flatFileStoreMetrics.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/db/flatFileStore/flatFileStoreUpgrade.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/db/flatFileStore/slotIndex.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/collect.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/collectSequentialBlocksInRange.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/protocols.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/rateLimit.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/score.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/beaconBlocksByHead.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/executionPayloadEnvelopes.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/inclusionListsByIndices.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/index.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/lightClientForkContext.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/lightClientUpdatesByRange.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/rangeValidation.test.ts",
+      "status": "passed"
+    },
+    {
+      "path": "packages/beacon-node/test/unit/network/reqresp/handlers/unfinalizedRange.test.ts",
+      "status": "passed"
+    }
+  ],
+  "warnings": [
+    "Two worker processes emitted MaxListenersExceededWarning for 11 uncaughtException listeners."
+  ],
+  "limits": [
+    "Focused local unit tests, not the full test suite.",
+    "Not a performance or production-memory measurement.",
+    "No mutation tests were rerun for this journal entry.",
+    "The PR-head GitHub Tests workflow requires approval; this local result does not establish CI success."
+  ]
+}
